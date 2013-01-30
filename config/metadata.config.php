@@ -7,7 +7,6 @@ return array(
         32 => '/static/apps/lib_disqus/images/32-disqus.png',
         64 => '/static/apps/lib_disqus/images/64-disqus.png',
     ),
-    'extends' => 'noviusos_comments',
     'provider' => array(
         'name' => 'Novius',
     ),
