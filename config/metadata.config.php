@@ -7,6 +7,7 @@ return array(
         32 => '/static/apps/lib_disqus/images/32-disqus.png',
         64 => '/static/apps/lib_disqus/images/64-disqus.png',
     ),
+    'extends' => 'noviusos_comments',
     'provider' => array(
         'name' => 'Novius',
     ),
@@ -16,6 +17,15 @@ return array(
     'launchers' => array(
         'disqus_launcher' => array(
             'name' => 'Disqus',
+            'action' => array(
+                'action' => 'nosTabs',
+                'tab' => array(
+                    'url' => 'admin/lib_disqus/appdesk/externe',
+                )
+            ),
+        ),
+        'disqus_launcher_configuration' => array(
+            'name' => 'Disqus Configuration',
             'action' => array(
                 'action' => 'nosTabs',
                 'tab' => array(
