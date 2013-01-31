@@ -1,1 +1,1 @@
-<a class="lib_disqus_externe" href="admin/lib_disqus/appdesk/externe"><?= $label ?></a>
+<a class="lib_disqus_externe" href="admin/lib_disqus/config/externe"><?= $label ?></a>

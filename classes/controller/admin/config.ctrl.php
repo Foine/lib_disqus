@@ -10,11 +10,11 @@
 
 namespace Lib\Disqus;
 
-class Controller_Admin_Appdesk extends \Nos\Controller_Admin_Application
+class Controller_Admin_Config extends \Nos\Controller_Admin_Application
 {
     public function action_index($view = null)
     {
-        $config = \Config::load('lib_disqus::api_config', 'disqus_api_config', true);
+        $config = \Config::load('local::disqus_api_config', 'disqus_api_config', true);
         return \View::forge('lib_disqus::admin/index', array(
             'config' => $config,
         ), false);
@@ -22,10 +22,10 @@ class Controller_Admin_Appdesk extends \Nos\Controller_Admin_Application
 
     public function action_save($view = null)
     {
-        $config = \Config::load('lib_disqus::api_config', 'disqus_api_config', true);
+        $config = \Config::load('local::disqus_api_config', 'disqus_api_config', true);
         if (\Fuel\Core\Input::post('disqus_shortname')) {
             $config['disqus_shortname'] = \Fuel\Core\Input::post('disqus_shortname');
-            $result = \Config::save('lib_disqus::api_config', $config);
+            $result = \Config::save('local::disqus_api_config', $config);
         }
         $return = array();
         if (!empty($result)) {

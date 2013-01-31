@@ -1,6 +1,6 @@
 <?
 \View::redirect('noviusos_comments::front/list', false, function&(&$datas){
-    $config = \Config::load('lib_disqus::api_config', 'disqus_api_config', true);
+    $config = \Config::load('local::disqus_api_config', 'disqus_api_config', true);
     if ($config['disqus_shortname']) {
         $datas['config'] = $config;
         return 'lib_disqus::front/main';
@@ -9,7 +9,7 @@
     }
 });
 \View::redirect('noviusos_comments::front/form', false, function&(&$datas){
-    $config = \Config::load('lib_disqus::api_config', 'disqus_api_config', true);
+    $config = \Config::load('local::disqus_api_config', 'disqus_api_config', true);
     if ($config['disqus_shortname']) {
         $datas['config'] = $config;
         return 'lib_disqus::front/main';
@@ -18,7 +18,7 @@
     }
 });
 \View::redirect('noviusos_blognews::front/comment/nb', false, function(&$datas){
-    $config = \Config::load('lib_disqus::api_config', 'disqus_api_config', true);
+    $config = \Config::load('local::disqus_api_config', 'disqus_api_config', true);
     if ($config['disqus_shortname']) {
         $datas['config'] = $config;
         return 'lib_disqus::front/nb';

@@ -20,16 +20,17 @@ return array(
             'action' => array(
                 'action' => 'nosTabs',
                 'tab' => array(
-                    'url' => 'admin/lib_disqus/appdesk/externe',
+                    'url' => 'admin/lib_disqus/config/externe',
                 )
             ),
         ),
         'disqus_launcher_configuration' => array(
             'name' => 'Disqus Configuration',
+            'icon64' => '/static/apps/lib_disqus/images/64-config-disqus.png',
             'action' => array(
                 'action' => 'nosTabs',
                 'tab' => array(
-                    'url' => 'admin/lib_disqus/appdesk',
+                    'url' => 'admin/lib_disqus/config',
                 )
             ),
         ),
