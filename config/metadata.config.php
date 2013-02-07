@@ -3,9 +3,9 @@ return array(
     'name'    => 'Disqus',
     'version' => '0.1',
     'icons' => array(
-        16 => '/static/apps/lib_disqus/images/16-disqus.png',
-        32 => '/static/apps/lib_disqus/images/32-disqus.png',
-        64 => '/static/apps/lib_disqus/images/64-disqus.png',
+        16 => 'static/apps/lib_disqus/images/16-disqus.png',
+        32 => 'static/apps/lib_disqus/images/32-disqus.png',
+        64 => 'static/apps/lib_disqus/images/64-disqus.png',
     ),
     'extends' => 'noviusos_comments',
     'provider' => array(
@@ -26,7 +26,7 @@ return array(
         ),
         'disqus_launcher_configuration' => array(
             'name' => 'Disqus Configuration',
-            'icon64' => '/static/apps/lib_disqus/images/64-config-disqus.png',
+            'icon64' => 'static/apps/lib_disqus/images/64-config-disqus.png',
             'action' => array(
                 'action' => 'nosTabs',
                 'tab' => array(
