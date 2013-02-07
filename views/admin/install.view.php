@@ -1,4 +1,4 @@
-<p><?= __('Disqus est votre modile de commentaire externe. Pour son bon fonctionnement, vous devez :') ?></p>
+<p><?= __('Disqus est votre module de commentaire externe. Pour son bon fonctionnement, vous devez :') ?></p>
 <ul>
     <li><?= __('Avoir un compte Disqus et vous connecter') ?>.
         <?= __('Si ce n\'est pas le cas, vous pouvez le créer depuis') ?>
