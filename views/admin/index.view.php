@@ -1,3 +1,4 @@
+<? Nos\I18n::current_dictionary(array('lib_disqus::default', 'nos::common')); ?>
 <h1 class="lib_disqus">
     <?= __('Configuration de disqus') ?>
 </h1>

@@ -25,6 +25,7 @@ class Controller_Admin_Config extends \Nos\Controller_Admin_Application
 
     public function action_save($view = null)
     {
+        \Nos\I18n::current_dictionary(array('lib_disqus::default', 'nos::common'));
         $config = \Config::load(APPPATH.\Lib\Disqus\Controller_Admin_Config::CONFIG_PATH, true);
         if (\Fuel\Core\Input::post('disqus_shortname')) {
             $config['disqus_shortname'] = \Fuel\Core\Input::post('disqus_shortname');
