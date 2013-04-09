@@ -36,5 +36,11 @@ return array(
         ),
     ),
     'enhancers' => array(
+        'disqus_enhancer_latest_comments' => array(
+            'title' => 'Latest Comments',
+            'desc'  => '',
+            'enhancer' => 'lib_disqus/front/latest_com',
+            'iconUrl' => 'static/apps/lib_disqus/images/16-disqus.png',
+        ),
     ),
 );
