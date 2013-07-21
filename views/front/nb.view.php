@@ -2,7 +2,6 @@
     $shortname = $config["disqus_shortname"];
     $js = <<<SCRIPT
     var disqus_shortname = '$shortname'; // required: replace example with your forum shortname
-    var disqus_identifier = '$item->post_id';
 
     /* * * DON'T EDIT BELOW THIS LINE * * */
     (function () {

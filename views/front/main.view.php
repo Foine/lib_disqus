@@ -9,6 +9,9 @@ if(!Lib\Disqus\Controller_Front::$main_affiche) :
     <? if (isset($from_item) && $from_item->post_id) : ?>
     var disqus_identifier = '<?= $from_item->post_id ?>';
     <? endif; ?>
+    <? if (isset($from_item) && $from_item->url()) : ?>
+    var disqus_url = '<?= $from_item->url() ?>';
+    <? endif; ?>
     /* * * DON'T EDIT BELOW THIS LINE * * */
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
