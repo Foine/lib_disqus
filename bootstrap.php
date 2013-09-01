@@ -1,4 +1,9 @@
 <?
+//The default launcher of the comment app is removed
+Event::register_function('config|noviusos_comments::metadata', function(&$config)
+{
+    unset($config['launchers']);
+});
 \View::redirect('noviusos_comments::front/list', false, function(&$datas){
     $config = \Config::load(APPPATH.\Lib\Disqus\Controller_Admin_Config::CONFIG_PATH, true);
     if (isset($config['disqus_shortname']) && $config['disqus_shortname'] != '') {
