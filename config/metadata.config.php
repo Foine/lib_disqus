@@ -1,4 +1,5 @@
 <?php
+Nos\I18n::current_dictionary(array('lib_disqus::default', 'nos::common'));
 return array(
     'name'    => 'Disqus',
     'version' => '0.1',
@@ -21,6 +22,7 @@ return array(
                 'action' => 'nosTabs',
                 'tab' => array(
                     'url' => 'admin/lib_disqus/config/externe',
+                    'label' => __('Administration externe Disqus'),
                 )
             ),
         ),
@@ -37,7 +39,7 @@ return array(
     ),
     'enhancers' => array(
         'disqus_enhancer_latest_comments' => array(
-            'title' => 'Latest Comments',
+            'title' => __('Latest Comments'),
             'desc'  => '',
             'enhancer' => 'lib_disqus/front/latest_com',
             'iconUrl' => 'static/apps/lib_disqus/images/16-disqus.png',

@@ -54,4 +54,6 @@ return array(
     #: /home/lyon/brousse/i18n/ci/i18n/po/views/front/no_disqus.view.php:1
     'Disqus n\'est pas encore configuré. Rendez vous dans l\'administration pour entrer les informations nécessaires' => 'Disqus n\'est pas encore configuré. Rendez vous dans l\'administration pour entrer les informations nécessaires',
 
+    'Latest Comments' => 'Derniers commentaires',
+    'Administration externe Disqus' => 'Administration externe Disqus',
 );
