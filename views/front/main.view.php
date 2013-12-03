@@ -9,8 +9,8 @@ if(!Lib\Disqus\Controller_Front::$main_affiche) :
     <? if (isset($from_item) && $from_item->post_id) : ?>
     var disqus_identifier = '<?= $from_item->post_id ?>';
     <? endif; ?>
-    <? if (isset($from_item) && $from_item->url()) : ?>
-    var disqus_url = '<?= $from_item->url() ?>';
+    <? if (isset($from_item) && $from_item->virtual_name()) : ?>
+    var disqus_title = '<?= \Inflector::friendly_title($from_item->virtual_name()) ?>';
     <? endif; ?>
     /* * * DON'T EDIT BELOW THIS LINE * * */
     (function() {

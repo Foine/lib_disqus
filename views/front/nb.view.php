@@ -13,4 +13,4 @@
 SCRIPT;
     \Nos\Nos::main_controller()->addJavascriptInline($js, true);
 ?>
-<a href="<?= $item->url() ?>#disqus_thread">Link</a>
+<a data-disqus-identifier="<?= $item->post_id ?>" href="<?= $item->url() ?>#disqus_thread">Link</a>
