@@ -5,7 +5,8 @@ class Controller_Front extends \Nos\Controller
     static $main_affiche = false;
 
     public function action_latest_com($args = array()) {
-        $config = \Config::load(APPPATH.\Lib\Disqus\Controller_Admin_Config::CONFIG_PATH, true);
+        $config = \Lib\Disqus\Controller_Admin_Config::getOptions();
+        $config = \Arr::get($config, \Nos\Nos::main_controller()->getContext());
         if (empty($config['disqus_shortname'])) {
             return \View::forge('lib_disqus::front/no_disqus');
         }
