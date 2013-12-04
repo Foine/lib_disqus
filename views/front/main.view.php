@@ -10,9 +10,6 @@ if(!Lib\Disqus\Controller_Front::$main_affiche) :
     <? if (isset($from_item) && $from_item->post_id) : ?>
     var disqus_identifier = '<?= \Lib\Disqus\Disqus::getIdentifierFromItem($from_item) ?>';
     <? endif; ?>
-    <? if (isset($from_item) && $from_item->virtual_name()) : ?>
-    var disqus_title = '<?= \Inflector::friendly_title($from_item->virtual_name()) ?>';
-    <? endif; ?>
     /* * * DON'T EDIT BELOW THIS LINE * * */
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
