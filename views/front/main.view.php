@@ -3,11 +3,12 @@ if(!Lib\Disqus\Controller_Front::$main_affiche) :
     Lib\Disqus\Controller_Front::$main_affiche = true;
 ?>
 <div id="disqus_thread"></div>
+<?= \Nos\Nos::main_controller()->isPreview() ? '<!--' : ''  ?>
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
     var disqus_shortname = '<?= $config['disqus_shortname'] ?>'; // required: replace example with your forum shortname
     <? if (isset($from_item) && $from_item->post_id) : ?>
-    var disqus_identifier = '<?= $from_item->post_id ?>';
+    var disqus_identifier = '<?= \Lib\Disqus\Disqus::getIdentifierFromItem($from_item) ?>';
     <? endif; ?>
     <? if (isset($from_item) && $from_item->virtual_name()) : ?>
     var disqus_title = '<?= \Inflector::friendly_title($from_item->virtual_name()) ?>';
@@ -19,6 +20,7 @@ if(!Lib\Disqus\Controller_Front::$main_affiche) :
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
 </script>
+<?= \Nos\Nos::main_controller()->isPreview() ? '-->' : ''  ?>
 <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 <? endif; ?>
