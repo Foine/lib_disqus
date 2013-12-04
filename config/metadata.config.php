@@ -9,6 +9,7 @@ return array(
         64 => 'static/apps/lib_disqus/images/64-disqus.png',
     ),
     'extends' => 'noviusos_comments',
+    'requires' => array('lib_options'),
     'provider' => array(
         'name' => 'Novius',
     ),
@@ -32,7 +33,7 @@ return array(
             'action' => array(
                 'action' => 'nosTabs',
                 'tab' => array(
-                    'url' => 'admin/lib_disqus/config',
+                    'url' => 'admin/lib_disqus/config/form',
                 )
             ),
         ),

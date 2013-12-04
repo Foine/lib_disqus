@@ -9,3 +9,25 @@
     <li><?= __('Remplir les information de ce nouveau site') ?></li>
     <li><?= __('Récupérer le "shortname" de ce nouveau site pour l\'enregistrer si dessus') ?></li>
 </ul>
+<script language="JAVAScript">
+    require(
+        [
+            'jquery-nos'
+        ],
+        function($) {
+            var onglet_externe =
+            {
+                url: '',
+                label: '<?= __('Administration externe Disqus') ?>',
+                labelDisplay: false,
+                iconUrl: 'static/apps/lib_disqus/images/32-disqus.png',
+                iconSize: 32
+            }
+            $('a.lib_disqus_externe').on('click', function(event){
+                event.preventDefault();
+                onglet_externe.url = $(this).attr('href');
+                $(this).nosTabs('open', onglet_externe);
+            });
+        }
+    );
+</script>
